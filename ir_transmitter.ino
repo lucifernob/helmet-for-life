@@ -1,6 +1,6 @@
 #include <VirtualWire.h>        //Including library
 
-//Initiating pin
+//Initialise pins
 int led_pin = 6;
 int transmit_pin = 12;
 int ir_sensor = 2;
@@ -20,6 +20,7 @@ void loop()
   char msg[1] = {'0'};
   val = digitalRead(ir_sensor);               // Get sensor value
   Serial.println(val);                        // Print value  
+  
   //Check if motion is detected
   if (val == 1)
   {
